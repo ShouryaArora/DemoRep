@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Demo On Video</title>
+<h1>Sample demo to play a sample video</h1>
+<script type="text/javascript">
+var video;
+window.onload=function(){
+	video=document.getElementById("sampleVideo")
+}
+
+function play(){
+	video.play();
+}
+function pause(){
+	video.pause();
+}
+function back(){
+	video.currentTime-=10;
+}
+
+function forward(){
+	video.currentTime+=10;
+}
+
+</script>
+</head>
+<body>
+<video height="400" width="600" id="sampleVideo" poster="KonarkTemple.jpg"> 
+<source src="Konark_Sun_Temple_Orissa_Odisha.mp4" type="audio/mp4"/>
+</video>
+</br></br>
+<img width="50" height="50" src="./Reload.png" onClick="back();"/>
+<img width="50" height="50" src="./PlayButton.jpg" onClick="play();"/>
+<img width="50" height="50" src="./PauseButton.jpg" onClick="pause();"/>
+<img width="50" height="50" src= "./ForwardButton.jpg" onClick="forward();"/>
+
+
+</body>
+</html>
